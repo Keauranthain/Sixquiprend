@@ -1,8 +1,11 @@
-import Data.Deck;
+package Java;
+
+import Java.Data.Card.Deck;
+import Java.Data.Game;
 
 public class Main {
     public static void main(String[] args) {
-        Deck deck = new Deck();
-        deck.centraldeckmaker();
+        Game game = new Game(0,10);
+        game.play();
     }
 }

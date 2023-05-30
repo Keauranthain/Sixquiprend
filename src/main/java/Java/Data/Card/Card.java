@@ -1,10 +1,12 @@
-package Data;
+package Java.Data.Card;
+import Java.Data.Player.Player;
 import lombok.Getter;
 import lombok.Setter;
 @Getter @Setter
 public class Card {
     int number;
     int bullhead;
+    Player myplayer;
 
     public Card(int number){
         this.number = number;
