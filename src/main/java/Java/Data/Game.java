@@ -6,6 +6,7 @@ import Java.Data.Card.Stack;
 import Java.Data.Player.AIplayer;
 import Java.Data.Player.Player;
 import Java.Data.Player.Realplayer;
+import Java.Data.Printer.Printer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,7 @@ public class Game {
     public static Deck mydeck;
     public static List<Stack> mysacks;
     public static Deck throwcard;
+    public static Printer printer;
     List<Player> myplayers;
     public Game (int real,int ai){
         Deck deck = new Deck();
@@ -33,6 +35,7 @@ public class Game {
         this.mysacks=stacks;
         this.myplayers=players;
         this.throwcard=new Deck();
+        this.printer = new Printer();
     }
 
     public void play (){

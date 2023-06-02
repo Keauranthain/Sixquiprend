@@ -7,6 +7,7 @@ public class Card {
     int number;
     int bullhead;
     Player myplayer;
+    String image;
 
     public Card(int number){
         this.number = number;
@@ -22,6 +23,7 @@ public class Card {
         }else {
             this.bullhead = 1;
         }
+        this.image = "Card\\carte"+12+".png";
     }
 
 }

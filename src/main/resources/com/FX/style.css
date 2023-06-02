@@ -1,0 +1,6 @@
+.root {
+    -fx-background-color: #ffffff; /* Couleur d'arrière-plan */
+    -fx-background-image: url("./background.gif"); /* Image d'arrière-plan */
+    -fx-background-size: cover; /* Ajustement de la taille de l'image */
+    -fx-background-repeat: no-repeat; /* Pas de répétition de l'image */
+}
