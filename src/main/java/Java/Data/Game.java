@@ -84,7 +84,7 @@ public class Game {
             int playercardnumber = playercard.getNumber();
             for (int i = 0; i < 4; i++) {
                 int stackcard = mysacks.get(i).last();
-                if (stackcard < playercardnumber && (closer == -1 || stackcard < mysacks.get(closer).last())) {
+                if (stackcard < playercardnumber && (closer == -1 || stackcard > mysacks.get(closer).last())) {
                     closer = i;
                 }
             }

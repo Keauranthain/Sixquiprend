@@ -5,7 +5,7 @@ import Java.Data.Game;
 
 public class Main {
     public static void main(String[] args) {
-        Game game = new Game(0,10);
+        Game game = new Game(0,3);
         game.play();
     }
 }

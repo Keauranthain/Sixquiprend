@@ -22,16 +22,18 @@ public class AIplayer extends Player {
             }
         }
         for (int k=1;hand.length>k;k++){
-            if (result == -1 && hand[k].getNumber()>mini){
-                result = k;
-            } else if(result > -1) {
-                if (hand[k].getNumber()<hand[result].getNumber() && hand[k].getNumber()>mini){
+            if (hand[k]!=null) {
+                if (result == -1 && hand[k].getNumber() > mini) {
                     result = k;
+                } else if (result > -1) {
+                    if (hand[k].getNumber() < hand[result].getNumber() && hand[k].getNumber() > mini) {
+                        result = k;
+                    }
                 }
-            }
-            if(hand[k].getNumber()>themax){
-                themax = hand[k].getNumber();
-                maxi = k;
+                if (hand[k].getNumber() > themax) {
+                    themax = hand[k].getNumber();
+                    maxi = k;
+                }
             }
         }
         if (result == -1){

@@ -10,8 +10,10 @@ public class Realplayer extends Player{
     }
     public int choose_card(){
         for (int k = 0; k<hand.length;k++){
-            System.out.print(hand.length);
-            System.out.print(" ");
+            if (hand[k] != null) {
+                System.out.print(hand[k].getNumber());
+                System.out.print(" ");
+            }
         }
         System.out.println("");
         System.out.print("Quelle carte : ");
