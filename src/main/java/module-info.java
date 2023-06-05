@@ -4,6 +4,7 @@ module Java.sixquiprend {
     requires lombok;
     requires junit;
     requires org.testng;
+    requires java.desktop;
 
 
     opens Java.Data.Controler to javafx.fxml;
