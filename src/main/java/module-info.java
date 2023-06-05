@@ -6,9 +6,7 @@ module Java.sixquiprend {
     requires org.testng;
 
 
-    opens Java to javafx.fxml;
+    opens Java.Data.Controler to javafx.fxml;
     exports Java;
-    exports Java.Data.Printer;
-    //exports;
-    //opens to
+    exports Java.Data.Controler;
 }
