@@ -6,16 +6,24 @@ import Java.Data.Card.Stack;
 import Java.Data.Player.AIplayer;
 import Java.Data.Player.Player;
 import Java.Data.Player.Realplayer;
-import Java.Data.Printer.Printer;
+import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game {
+public class Game{
     public static Deck mydeck;
     public static List<Stack> mysacks;
     public static Deck throwcard;
-    public static Printer printer;
     List<Player> myplayers;
     public Game (int real,int ai){
         Deck deck = new Deck();
@@ -35,12 +43,15 @@ public class Game {
         this.mysacks=stacks;
         this.myplayers=players;
         this.throwcard=new Deck();
-        this.printer = new Printer();
+    }
+    public Game() {
+        // Initialisation des membres de la classe
     }
 
     public void play (){
         gamestart();
         for (int n_turn=1;n_turn<11;n_turn++){
+            //stacker();
             turn();
         }
         gameresult();

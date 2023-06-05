@@ -46,4 +46,7 @@ public class Stack {
     public void add(Card card){
         mystack.add(card);
     }
+    public String cardimage(int i){
+        return mystack.get(i).getImage();
+    }
 }
