@@ -5,7 +5,6 @@ import Java.Data.Card.Deck;
 import Java.Data.Card.Stack;
 import Java.Data.Player.Player;
 import Java.Data.Player.Realplayer;
-import Java.Data.Printer.Printer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -23,8 +22,6 @@ class GameTest {
     List<Stack> mysacks;
     @Mock
     Deck throwcard;
-    @Mock
-    Printer printer;
     @Mock
     List<Player> myplayers;
     @InjectMocks
