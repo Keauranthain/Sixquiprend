@@ -8,27 +8,27 @@ class AIplayerTest {
     //Field hand of type Card[] - was not mocked since Mockito doesn't mock arrays
     AIplayer aIplayer = new AIplayer("name");
 
-    @Test
-    void testChoose_card() {
-        int result = aIplayer.choose_card();
-        Assertions.assertEquals(0, result);
-    }
+    //@Test
+    //void testChoose_card() {
+    //    int result = aIplayer.choose_card();
+    //    Assertions.assertEquals(0, result);
+    //}
 
-    @Test
-    void testChoose_stack() {
-        int result = aIplayer.choose_stack();
-        Assertions.assertEquals(0, result);
-    }
+    //@Test
+    //void testChoose_stack() {
+    //    int result = aIplayer.choose_stack();
+    //    Assertions.assertEquals(0, result);
+    //}
 
-    @Test
-    void testPlay() {
-        aIplayer.play();
-    }
+    //@Test
+    //void testPlay() {
+    //    aIplayer.play();
+    //}
 
-    @Test
-    void testDraw() {
-        aIplayer.draw();
-    }
+    //@Test
+    //void testDraw() {
+    //    aIplayer.draw();
+    //}
 
     @Test
     void testSetHand() {

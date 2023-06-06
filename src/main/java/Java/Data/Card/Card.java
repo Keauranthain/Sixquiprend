@@ -23,7 +23,7 @@ public class Card {
         }else {
             this.bullhead = 1;
         }
-        this.image = "Card\\carte"+12+".png";
+        this.image = System.getProperty("user.dir")+"\\src\\main\\resources\\com\\FX\\Card\\carte"+ number + ".png";
     }
 
 }

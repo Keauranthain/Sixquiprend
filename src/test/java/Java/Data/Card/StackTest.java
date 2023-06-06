@@ -9,8 +9,6 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
-import static org.mockito.Mockito.*;
-
 class StackTest {
     @Mock
     List<Card> mystack;

@@ -8,6 +8,8 @@ module Java.sixquiprend {
 
 
     opens Java.Data.Controler to javafx.fxml;
+    opens Java.Data to javafx.fxml;
     exports Java;
+    exports Java.Data;
     exports Java.Data.Controler;
 }

@@ -1,31 +1,31 @@
 package Java.Data.Player;
 
 import Java.Data.Card.Card;
+import Java.Data.Card.Deck;
+import Java.Data.Card.Stack;
+import Java.Data.Game;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Realplayer extends Player{
     public Realplayer (String name){
         this.name =name;
     }
-    public int choose_card(){
-        for (int k = 0; k<hand.length;k++){
-            if (hand[k] != null) {
-                System.out.print(hand[k].getNumber());
-                System.out.print(" ");
-            }
+    public void play(List<Stack> stacks, Deck throwcard){
+        if (Game.user!=-1){
+            Card card = throw_card(Game.user,stacks);
+            throwcard.add(card);
         }
-        System.out.println("");
-        System.out.print("Quelle carte : ");
-        Scanner scanner = new Scanner(System.in);
-        int input = Integer.parseInt(scanner.nextLine());
-        return input;
     }
-    public int choose_stack(){
-        System.out.print("Quelle stack : ");
-        Scanner scanner = new Scanner(System.in);
-        int input = Integer.parseInt(scanner.nextLine());
-        return input;
+
+    public void choose_stack(List<Stack> stacks, Deck throcard){
+        int result = 1;
+        if (Game.user!=-1){
+            result = Game.user;
+            addpoint(stacks.get(result),throcard);
+        }
+        System.out.println("valeur :"+Game.user);
     }
 
 }

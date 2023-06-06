@@ -7,15 +7,15 @@ class PlayerTest {
     //Field hand of type Card[] - was not mocked since Mockito doesn't mock arrays
     Player player = new Realplayer("name");
 
-    @Test
-    void testPlay() {
-        player.play();
-    }
+    //@Test
+    //void testPlay() {
+    //    player.play();
+    //}
 
-    @Test
-    void testDraw() {
-        player.draw();
-    }
+    //@Test
+    //void testDraw() {
+    //    player.draw();
+    //}
 
     @Test
     void testSetHand() {

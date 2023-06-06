@@ -2,6 +2,7 @@ package Java.Data.Player;
 
 import Java.Data.Card.Card;
 import Java.Data.Card.Deck;
+import Java.Data.Card.Stack;
 import Java.Data.Game;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,25 +14,25 @@ public abstract class Player {
     Card[] hand;
     int point;
     String name;
-    public void play(){
-        Card card = throw_card();
-        Game.throwcard.add(card);
+    public abstract void play(List<Stack> stacks,Deck throwcard);
+    public abstract void choose_stack (List<Stack> stacks,Deck throcard);
+    public void draw(Deck deck){
+        hand = new Card[10];
+        for (int k=0;k<10;k++){
+            hand[k]=deck.getcard(0);
+            deck.remove(0);
+        }
+
     }
-    public abstract int choose_card();
-    public abstract int choose_stack();
-    private Card throw_card(){
-        int card = choose_card();
+    public Card throw_card(int card, List<Stack> stacks){
         Card thecard = hand[card];
         thecard.setMyplayer(this);
         hand[card]=null;
         return thecard;
     }
-    public void draw(){
-        hand = new Card[10];
-        for (int k=0;k<10;k++){
-            hand[k]=Game.mydeck.getcard(0);
-            Game.mydeck.remove(0);
-        }
-
+    public void addpoint(Stack stacks,Deck throwcard){
+        point = point + stacks.point();
+        stacks.reset(throwcard.getcard(0));
+        throwcard.remove(0);
     }
 }

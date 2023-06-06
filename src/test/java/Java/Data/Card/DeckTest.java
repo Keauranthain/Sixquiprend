@@ -11,8 +11,6 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
-import static org.mockito.Mockito.*;
-
 class DeckTest {
     @Mock
     List<Card> mydeck;

@@ -2,241 +2,262 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="500.0" prefWidth="800.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.Data.Controler.GameControler">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <FlowPane alignment="CENTER" prefHeight="255.0" prefWidth="760.0">
+<fx:root alignment="CENTER" prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css" type="VBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.Data.Game">
+   <Pane fx:id="thegame" prefHeight="514.0" prefWidth="800.0">
+      <padding>
+         <Insets right="20.0" top="20.0" />
+      </padding>
       <children>
-         <FlowPane id="Stack1" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="340.0">
+         <FlowPane fx:id="allstack" alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="255.0" prefWidth="760.0">
             <children>
-               <ImageView fitHeight="90.0" fitWidth="50.0">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-
-               <ImageView pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <viewport>
-                     <Rectangle2D width="10.0" />
-                  </viewport>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
+               <FlowPane id="Stack1" fx:id="stack1" alignment="CENTER_LEFT" onMouseClicked="#inputstack0" prefHeight="100.0" prefWidth="340.0">
+                  <children>
+                     <ImageView fitHeight="90.0" fitWidth="50.0">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+      
+                     <ImageView pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <viewport>
+                           <Rectangle2D width="10.0" />
+                        </viewport>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </FlowPane>
+               <FlowPane id="Stack3" fx:id="stack3" alignment="BOTTOM_LEFT" onMouseClicked="#inputstack2" prefHeight="100.0" prefWidth="340.0">
+                  <children>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </FlowPane>
+               <FlowPane id="Stack2" fx:id="stack2" alignment="CENTER_LEFT" onMouseClicked="#inputstack1" prefHeight="100.0" prefWidth="340.0">
+                  <children>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </FlowPane>
+               <FlowPane id="Stack4" fx:id="stack4" alignment="CENTER_LEFT" onMouseClicked="#inputstack3" prefHeight="100.0" prefWidth="340.0">
+                  <children>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </FlowPane>
             </children>
          </FlowPane>
-         <FlowPane id="Stack3" alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="340.0">
+         <Button fx:id="start" layoutX="357.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#begin" text="Commencer !" />
+         <FlowPane id="Hand" fx:id="curentplayer" alignment="CENTER" layoutX="20.0" layoutY="312.0" maxHeight="137.0" maxWidth="760.0" prefHeight="137.0" prefWidth="760.0">
             <children>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-            </children>
-         </FlowPane>
-         <FlowPane id="Stack2" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="340.0">
-            <children>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-            </children>
-         </FlowPane>
-         <FlowPane id="Stack4" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="340.0">
-            <children>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
+               <FlowPane alignment="CENTER_RIGHT" maxHeight="50.0" maxWidth="760.0" minHeight="50.0" minWidth="760.0" prefHeight="50.0" prefWidth="760.0">
+                  <children>
+                     <Pane prefHeight="50.0" prefWidth="691.0">
+                        <children>
+                           <Label fx:id="playernamefx" layoutX="346.0" layoutY="10.0" text="Joueur" textAlignment="CENTER" textFill="WHITE">
+                              <font>
+                                 <Font name="Cambria Italic" size="24.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="playeractionfx" layoutX="9.0" layoutY="14.0" textAlignment="CENTER" textFill="WHITE">
+                              <font>
+                                 <Font name="Cambria" size="18.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Label id="Point" fx:id="playerpointfx" text="0" textFill="WHITE">
+                        <font>
+                           <Font name="Cambria" size="24.0" />
+                        </font>
+                        <FlowPane.margin>
+                           <Insets right="5.0" />
+                        </FlowPane.margin>
+                     </Label>
+                     <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@bullhead.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </FlowPane>
+               <FlowPane fx:id="hand" alignment="CENTER" prefHeight="100.0" prefWidth="606.0">
+                  <children>
+                     <ImageView fx:id="card01" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card02" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard1" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card03" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard2" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card04" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard3" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card05" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard4" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card06" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard5" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card07" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard6" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card08" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard7" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card09" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard8" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                        <FlowPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </FlowPane.margin>
+                     </ImageView>
+                     <ImageView fx:id="card10" fitHeight="90.0" fitWidth="50.0" onMouseClicked="#inputcard9" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Card/nocard.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </FlowPane>
             </children>
          </FlowPane>
       </children>
-   </FlowPane>
-   <FlowPane id="Hand" alignment="CENTER" maxHeight="137.0" maxWidth="760.0" prefHeight="137.0" prefWidth="760.0">
-      <children>
-         <FlowPane alignment="CENTER_RIGHT" maxHeight="50.0" maxWidth="760.0" minHeight="50.0" minWidth="760.0" prefHeight="50.0" prefWidth="760.0">
-            <children>
-               <Label id="Point" text="0" textFill="WHITE">
-                  <font>
-                     <Font name="Cambria" size="24.0" />
-                  </font>
-                  <FlowPane.margin>
-                     <Insets right="5.0" />
-                  </FlowPane.margin>
-               </Label>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@bullhead.png" />
-                  </image>
-               </ImageView>
-            </children>
-         </FlowPane>
-         <FlowPane alignment="CENTER" prefHeight="100.0" prefWidth="606.0">
-            <children>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-                  <FlowPane.margin>
-                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </FlowPane.margin>
-               </ImageView>
-               <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@Card/nocard.png" />
-                  </image>
-               </ImageView>
-            </children>
-         </FlowPane>
-      </children>
-   </FlowPane>
-</VBox>
+   </Pane>
+</fx:root>

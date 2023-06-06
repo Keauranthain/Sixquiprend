@@ -1,12 +1,15 @@
 package Java.Data.Controler;
 
+import Java.Data.Game;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import lombok.Getter;
 
-@Getter
+import java.io.IOException;
+
 public class LauncherControler {
     public static int ai;
     public static int real = 2;
@@ -44,10 +47,14 @@ public class LauncherControler {
         RealLabel.setText(String.valueOf(real));
     }
     @FXML
-    public void closeWindow() {
+    public void closeWindow() throws IOException {
         if (ai+real>1) {
             Stage stage = (Stage) AILabel.getScene().getWindow();
-            stage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("/com/FX/sixquiprend.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(),800,500);
+            //stage.getIcons().add(new Image(getClass().getResourceAsStream("bullhead.png")));
+            stage.setTitle("Six qui prend !");
+            stage.setScene(scene);
         }
     }
 
