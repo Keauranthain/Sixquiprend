@@ -7,21 +7,16 @@ import Java.Data.Controler.LauncherControler;
 import Java.Data.Player.AIplayer;
 import Java.Data.Player.Player;
 import Java.Data.Player.Realplayer;
-import javafx.application.Application;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import lombok.Getter;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 @Getter
@@ -54,16 +49,6 @@ public class Game implements Music{
     private void gamestart (){
         for (int k=0;myplayers.size()>k;k++){
             myplayers.get(k).draw(mydeck);
-        }
-    }
-    private void gameresult(){
-        ranking();
-        for (int k=0;k<myplayers.size();k++){
-            System.out.print(k+1);
-            System.out.print(" : ");
-            System.out.print(myplayers.get(k).getName());
-            System.out.print("   Score :");
-            System.out.println(myplayers.get(k).getPoint());
         }
     }
     private void nextcard(){
@@ -118,31 +103,6 @@ public class Game implements Music{
             if (throwcard.size()>playernumber){
                 playernumber++;
                 nextplayer();
-            }
-        }
-    }
-    private void place(){
-        throwcard.merge();
-        while (throwcard.size()>0) {
-            int closer = -1;
-            Card playercard = throwcard.getcard(0);
-            int playercardnumber = playercard.getNumber();
-            for (int i = 0; i < 4; i++) {
-                int stackcard = mystacks.get(i).last();
-                if (stackcard < playercardnumber && (closer == -1 || stackcard > mystacks.get(closer).last())) {
-                    closer = i;
-                }
-            }
-            if (closer == -1) {
-                Player player = throwcard.getplayer(0);
-                player.choose_stack(mystacks,throwcard);
-            }else if (mystacks.get(closer).control()) {
-                Player player = throwcard.getplayer(0);
-                player.setPoint(player.getPoint() + mystacks.get(closer).point());
-                player.addpoint(mystacks.get(closer),throwcard);
-            }else {
-                mystacks.get(closer).add(playercard);
-                throwcard.remove(0);
             }
         }
     }

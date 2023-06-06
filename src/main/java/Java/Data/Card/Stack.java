@@ -1,6 +1,4 @@
 package Java.Data.Card;
-
-import Java.Data.Card.Card;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,12 +7,6 @@ import java.util.List;
 @Getter @Setter
 public class Stack {
     List<Card> mystack;
-
-    public Stack (Card card){
-        List<Card> stack = new ArrayList<>();
-        stack.add(card);
-        this.mystack = stack;
-    }
     public Stack (Deck card){
         List<Card> stack = new ArrayList<>();
         stack.add(card.getMydeck().get(0));

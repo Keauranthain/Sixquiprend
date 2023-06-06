@@ -6,8 +6,6 @@ import Java.Data.Card.Stack;
 import Java.Data.Game;
 
 import java.util.List;
-import java.util.Scanner;
-
 public class Realplayer extends Player{
     public Realplayer (String name){
         this.name =name;

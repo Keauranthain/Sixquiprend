@@ -9,7 +9,6 @@ public interface Music {
         String musicFile = "music.wav";
         URL url = Thread.currentThread().getContextClassLoader().getResource(musicFile);
         try {
-            //URL url = Music.class.getResource(musicFile);
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(url);
             AudioFormat format = audioInputStream.getFormat();
             DataLine.Info info = new DataLine.Info(Clip.class, format);
