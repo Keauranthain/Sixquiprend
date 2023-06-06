@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.Getter;
 
@@ -66,11 +67,15 @@ public class Game implements Music{
         }
     }
     private void nextcard(){
-        if (throwcard.size()==0){
+        if (throwcard.size()==0 && teststillcard()){
             playernumber =0;
             stage = 1;
+            System.out.println("hand size :"+myplayers.get(0).getHand().length);
             nextplayer();
-        } else {
+        } else if (throwcard.size()==0){
+            showresult();
+            System.out.println("hand size :"+myplayers.get(0).getHand().length);
+        }else {
             int start= throwcard.size();
             throwcard.merge();
             handsetup(throwcard.getplayer(0));
@@ -181,7 +186,15 @@ public class Game implements Music{
 
 
 
-
+    private boolean teststillcard(){
+        boolean result = false;
+        for (int k = 0 ; k<myplayers.get(0).getHand().length;k++){
+            if (myplayers.get(0).getHand()[k]!=null){
+                result = true;
+            }
+        }
+        return result;
+    }
     private int stage;
     private int playernumber;
     public static int user;
@@ -203,6 +216,8 @@ public class Game implements Music{
     @FXML
     private FlowPane curentplayer;
 
+    @FXML
+    private VBox resulttablefx;
     private void stacker() {
         for (int k = 0; 4 > k; k++) {
             Node node = allstack.getChildren().get(k);
@@ -212,7 +227,27 @@ public class Game implements Music{
             }
         }
     }
-
+    private void showresult(){
+        ranking();
+        resulttablefx.setVisible(true);
+        curentplayer.setVisible(false);
+        allstack.setVisible(false);
+        for (int k = 0; k<myplayers.size();k++){
+            Node node = hand.getChildren().get(k);
+            if (node instanceof Label) {
+                Label ranker = (Label) node;
+                String rank = String.valueOf(k);
+                if (k==1){
+                    rank = rank +"er :";
+                } else {
+                    rank = rank +"eme :";
+                }
+                rank = rank +myplayers.get(k).getName();
+                ranker.setText(rank);
+                ranker.setVisible(true);
+            }
+        }
+    }
     private void setstack(Stack stack, FlowPane stacker){
         for (int k = 0; k < 5; k++) {
             Node node = stacker.getChildren().get(k);
@@ -331,4 +366,5 @@ public class Game implements Music{
     private void inputstack3(){
         teststack(3);
     }
+
 }

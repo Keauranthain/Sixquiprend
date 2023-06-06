@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root alignment="CENTER" prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css" type="VBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.Data.Game">
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.Data.Game">
    <Pane fx:id="thegame" prefHeight="514.0" prefWidth="800.0">
       <padding>
          <Insets right="20.0" top="20.0" />
@@ -258,6 +258,60 @@
                </FlowPane>
             </children>
          </FlowPane>
+         <VBox fx:id="resulttablefx" alignment="CENTER" layoutX="55.0" layoutY="38.0" prefHeight="424.0" prefWidth="691.0" visible="false">
+            <children>
+               <Label fx:id="rank1" text="1er" textFill="YELLOW">
+                  <font>
+                     <Font name="Cambria" size="48.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank2" text="2eme" textFill="#cccccc">
+                  <font>
+                     <Font name="Cambria" size="36.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank3" text="3eme" textFill="#dd8800" visible="false">
+                  <font>
+                     <Font name="Cambria" size="30.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank4" text="4eme" textFill="#888888" visible="false">
+                  <font>
+                     <Font name="Cambria" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank5" text="5eme" textFill="#888888" visible="false">
+                  <font>
+                     <Font name="Cambria" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank42" text="6eme" textFill="#888888" visible="false">
+                  <font>
+                     <Font name="Cambria" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank43" text="7eme" textFill="#888888" visible="false">
+                  <font>
+                     <Font name="Cambria" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank44" text="8eme" textFill="#888888" visible="false">
+                  <font>
+                     <Font name="Cambria" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank45" text="9eme" textFill="#888888" visible="false">
+                  <font>
+                     <Font name="Cambria" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="rank46" text="10eme" textFill="#888888" visible="false">
+                  <font>
+                     <Font name="Cambria" size="20.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
       </children>
    </Pane>
-</fx:root>
+</VBox>
