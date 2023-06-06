@@ -70,11 +70,9 @@ public class Game implements Music{
         if (throwcard.size()==0 && teststillcard()){
             playernumber =0;
             stage = 1;
-            System.out.println("hand size :"+myplayers.get(0).getHand().length);
             nextplayer();
         } else if (throwcard.size()==0){
             showresult();
-            System.out.println("hand size :"+myplayers.get(0).getHand().length);
         }else {
             int start= throwcard.size();
             throwcard.merge();
@@ -233,18 +231,21 @@ public class Game implements Music{
         curentplayer.setVisible(false);
         allstack.setVisible(false);
         for (int k = 0; k<myplayers.size();k++){
-            Node node = hand.getChildren().get(k);
+            Node node = resulttablefx.getChildren().get(k);
             if (node instanceof Label) {
                 Label ranker = (Label) node;
-                String rank = String.valueOf(k);
-                if (k==1){
+                String rank = String.valueOf(k+1);
+                if (k==0){
                     rank = rank +"er :";
                 } else {
                     rank = rank +"eme :";
                 }
-                rank = rank +myplayers.get(k).getName();
+                rank = rank +myplayers.get(k).getName()+"     score :"+myplayers.get(k).getPoint();
                 ranker.setText(rank);
                 ranker.setVisible(true);
+            }
+            else {
+                System.out.println("Faux");
             }
         }
     }

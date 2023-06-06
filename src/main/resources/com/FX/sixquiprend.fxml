@@ -52,7 +52,7 @@
                      </ImageView>
                   </children>
                </FlowPane>
-               <FlowPane id="Stack3" fx:id="stack3" alignment="BOTTOM_LEFT" onMouseClicked="#inputstack2" prefHeight="100.0" prefWidth="340.0">
+               <FlowPane id="Stack3" fx:id="stack3" alignment="BOTTOM_LEFT" onMouseClicked="#inputstack1" prefHeight="100.0" prefWidth="340.0">
                   <children>
                      <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                         <image>
@@ -81,7 +81,7 @@
                      </ImageView>
                   </children>
                </FlowPane>
-               <FlowPane id="Stack2" fx:id="stack2" alignment="CENTER_LEFT" onMouseClicked="#inputstack1" prefHeight="100.0" prefWidth="340.0">
+               <FlowPane id="Stack2" fx:id="stack2" alignment="CENTER_LEFT" onMouseClicked="#inputstack2" prefHeight="100.0" prefWidth="340.0">
                   <children>
                      <ImageView fitHeight="90.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                         <image>
